@@ -29,9 +29,17 @@ string getDia(int i){
 int main(int argc, char const *argv[])
 {
 	srand (time(NULL));
-	int numPrimersPlats = 50;
-	int numSegonsPlats = 50;
-	int numTipus = 6;
+	int numPrimersPlats;
+	int numSegonsPlats;
+	int numTipus;
+	if(argc < 4){
+	    cout << "aquest executable requereix 3 parametres adicionals, el numero de primers plats, el numero de segons plats i el numero de tipus de plats";
+		return 0;
+	}else {
+		numPrimersPlats = atoi(argv[1]);
+		numSegonsPlats = atoi(argv[2]);
+		numTipus = atoi(argv[3]);
+	}
 
 
 	int idPrimerPlatoRestriccion3 = rand()%numPrimersPlats;
